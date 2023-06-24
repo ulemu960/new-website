@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ulemu development services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: josefin sans-serif;
+            box-sizing: border-box;
+        }
+        .hero{
+            height: 100vh;
+            width: 100%;
+            background-image: url("banner-bg.png");
+            background-size: cover;
+            background-position: center;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 45px;
+            padding-left: 8%;
+            padding-right: 8%;
+        }
+        logo{
+            color: black;
+            font-size: 35px;
+            letter-spacing: 1px;
+            cursor: pointer;
+
+        }
+        span{
+            color: #f9004d;
+        }
+        nav ul li{
+            list-style-type: none;
+            display: inline-block;
+            padding: 10px  24px;
+            font-weight: bold;
+            text-transform: capitalize;
+
+        }
+        .btn{
+            background-color: red;
+            color: black;
+            border: 2px solid transparent;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 25px;
+            border-radius: 30px;
+            transition: transform .4s;
+        }
+        .btn:hover{
+            transform: scale(1.2);
+        }
+        form{
+            color: black;
+        }
+        .content{
+            position: absolute;
+            top: 50%;
+            left: 8%;
+            transform: translateY(-50%);
+        }
+        h1{
+            color: black;
+            margin: 20px 0px 20px;
+            font-size: 80px;
+            margin-bottom: 50px;
+        }
+        h4{
+            color: black;
+            letter-spacing: 2px;
+            font-size: 20px;
+        }
+        .newslatter form input:first-child{
+            display: inline-block;
+            width: 100%;
+            padding: 12px 30px 29px 40px;
+            position: absolute;
+            outline: none;
+            border: none;
+            border-radius: 15px;
+
+        }
+        button{
+            position: absolute;
+            display: inline-block;
+            outline: none;
+            border: none;
+            padding: 5px 30px;
+            border-radius: 30px;
+            background-color: red;
+            color: black;
+            box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+            right: 5px;
+            bottom: 2px;
+            }
+
+            button:hover{
+                transform: scale(1.2);
+                border: 2px solid;
+            }
+        .About{
+            width: 100px;
+            padding: 100px 0px;
+            background-color: red;
+        }
+        .About img{
+            height:auto;
+            width: 420px;
+        }
+        .About text{
+            width: 550px;
+        }
+        .main{
+            width: 1100px;
+            max-width: 96%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .About-text h2{
+            color: black;
+            font-size: 75px;
+            text-transform: capitalize;
+            margin-bottom: 25px;
+        }
+        .About-text h5{
+            color: black;
+            letter-spacing: 2px;
+            font-size: 25px;
+            margin-bottom: 25px;
+            text-transform: capitalize;
+        }
+        .About-text h6{
+            color:deeppink;
+            letter-spacing: 1px;
+            line-height: 28px;
+            font-size: 15px;
+            margin-bottom: 45px;
+        }
+        button{
+            background-color: palevioletred;
+            margin-bottom: 16px;
+            color: black;
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 30px 20px;
+            border-radius: 20px;
+            align-items: center;
+            transition: .4s;
+        }
+        .services{
+            background-image: url("img-8.png");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            width: 100%;
+            padding: 100px 0px;
+        }
+        .title h2{
+            color: white;
+            font-size: 75px;
+            width: 1130px;
+            margin: 30px auto;
+            text-align: center;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items:baseline;
+            min-height: 400px;
+
+        }
+        .card{
+            height: 360px;
+            width: 350px;
+            padding: 20px 45px;
+            background: purple;
+            border-radius: 20px;
+            margin: 15px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        .card i{
+            font-size: 50px;
+            display: block;
+            text-align: center;
+            margin: 20px 0px;
+            color: black;
+        }
+        h5{
+            color: white;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+        .pra{
+            color: white;
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 25px;
+        }
+        .card .button{
+            background-color: black;
+            margin-bottom: 16px;
+            color: white;
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 9px 20px;
+            border-radius: 20px;
+            align-items: center;
+            transition: .4s;
+
+        }
+        .card .button:hover{
+            transform: scale(1.2);
+                border: 2px solid;
+
+        }
+        .contact-me{
+            width: 100%;
+            height:250px;
+            color: white;
+            background-image: url("IMG_20230411_210937_110.jpg");
+            background-position:center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+        .contact-me p{
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+             .contact-me  .button-two{
+                 transform: scale(1.2);
+                border: 2px solid;
+                 background-color:deeppink;
+                 border-radius: 20px;
+                 color: white;
+
+             }
+        footer{
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-image: url(img-6.png);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: black;
+        }
+        footer p:nth-child(1){
+            font-size: 30px;
+            color: black;
+            margin-bottom: 20px;
+            font-weight: bold;
+
+        }
+        footer p:nth-child(2){
+            color:black;
+            font-size: 20px;
+            width: 500px;
+            text-align: center;
+            line-height: 26px;
+
+        }
+       .social{
+           display: flex;
+       }
+       .social a{
+           width: 45px;
+           height: 45px;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           background: black;
+           border-radius: 50%;
+           margin: 22px 10px;
+       }
+        .social a:hover{
+            transform: scale(1.3);
+            transition: .3s;
+        }
+        .End{
+            position: absolute;
+            color:black;
+            bottom: 35px;
+            font-size: 14px;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+<div class="hero">
+    <nav>
+        <h2 class="logo">ulemu<span>DVP</span></h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+        <a href="#" class="btn">Subscribe</a>
+    </nav>
+
+<div class="content">
+    <h4>My name is</h4>
+    <h1>ulemu mkandawire</h1>
+    <h3>am a web developer</h3>
+<div class="newslatter">
+    <form>
+        <input type="email" name="email" id="mail" placeholder="Enter your Email">
+        <button> Lets start</button>
+    </form>
+</div>
+</div>
+</div>
+<selection class="About">
+    <div class="main">
+        <img src="img-6.png"/>
+        <div class="About-text">
+            <h2>About me</h2>
+            <h6>am ulemu junior mkandawire a holder of a teveta certificate at lilongwe technical collage. I was much iterested in web designig during my school days,so i venturesd into ot during my free time </h6>
+            <h5>development and designing </h5>
+        </div>
+    </div>
+</selection>
+<div class="services">
+    <div class="title">
+        <h2>our services</h2>
+    </div>
+    <div class="box">
+        <div class="card">
+            <i class="fa-solid fa-bars"></i>
+            <h5>Web development</h5>
+            <div class="pra">
+                <p>Every website needs to work effeciently and as fast as possible</p>
+                <p style="text-align: center">
+                    <a class="button" href="#">Read more</a>
+                </p>
+            </div>
+        </div>
+         <div class="card">
+             <i class="fa-solid fa-user"></i>
+            <h5>Web development</h5>
+            <div class="pra">
+                <p>Every website needs to work effeciently and as fast as possible</p>
+                <p style="text-align: center">
+                    <a class="button" href="#">Read more</a>
+                </p>
+            </div>
+         </div>
+               <div class="card">
+             <i class="fa-solid fa-bell"></i>
+            <h5>Web development</h5>
+            <div class="pra">
+                <p>Every website needs to work effeciently and as fast as possible</p>
+                <p style="text-align: center">
+                    <a class="button" href="#">Read more</a>
+                </p>
+            </div>
+         </div>
+    </div>
+</div>
+<div class="contact-me">
+    <p>Let me get you a beautiful website.</p>
+    <a class="button-two" href="#"> Hire me</a>
+</div>
+<footer>
+    <p>ulemu</p>
+    <p>for more informoation please click on the link below</p>
+    <div class="social">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+           <a href="#"><i class="fa-brands fa-instagram"></i></a>
+           <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+    <p class="End">Copyright by ulemu mkandawire</p>
+</footer>
+</body>
+</html>
